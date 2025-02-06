@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forex News Predictor</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Forex News Predictor</h1>
+        
+        <!-- Scrape Button -->
+        <button id="scrape-btn" class="btn">Start Scraping</button>
+        <div id="scrape-progress" class="progress"></div>
+        
+        <!-- Prediction Form -->
+        <form id="prediction-form" class="hidden form">
+            <h2>Predict News Impact</h2>
+            <label for="event">Event:</label>
+            <input type="text" id="event" name="event" placeholder="e.g., Nonfarm Payrolls" required>
+            
+            <label for="actual">Actual:</label>
+            <input type="number" step="any" id="actual" name="actual" placeholder="e.g., 200" required>
+            
+            <label for="forecast">Forecast:</label>
+            <input type="number" step="any" id="forecast" name="forecast" placeholder="e.g., 190" required>
+            
+            <label for="previous">Previous:</label>
+            <input type="number" step="any" id="previous" name="previous" placeholder="e.g., 180" required>
+            
+            <button type="submit" class="btn">Predict</button>
+        </form>
+        
+        <!-- Prediction Result -->
+        <div id="result" class="hidden result">
+            <h2>Prediction Result</h2>
+            <p><strong>Predicted Difference:</strong> <span id="predicted-difference"></span></p>
+            <p><strong>Outcome:</strong> <span id="outcome"></span></p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
