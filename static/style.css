@@ -1,0 +1,133 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Container Styling */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    padding: 30px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Title Styling */
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Buttons */
+.btn {
+    background: #ff6f61;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.btn:hover {
+    background: #ff4d4d;
+    transform: scale(1.05);
+}
+
+/* Progress Section */
+.progress {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #f9f9f9;
+    min-height: 50px;
+}
+
+.progress p {
+    margin: 5px 0;
+}
+
+/* Form Styling */
+.form {
+    margin-top: 20px;
+}
+
+.form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 1rem;
+}
+
+.form input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Result Section */
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.result p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.result span {
+    font-weight: 700;
+    color: #ff6f61;
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
